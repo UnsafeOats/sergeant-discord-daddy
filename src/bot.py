@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 from bot_appendages.utils import load_paywalls, load_token
-from bot_appendages.librarian import Librarian
+from bot_appendages.archiver import Librarian
 from bot_appendages.creeper import Creeper
 
 

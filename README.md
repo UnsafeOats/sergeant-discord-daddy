@@ -1,27 +1,16 @@
-# The Librarian
+# Sar'nt Major
 
-### Discord bot to open paywalled articles to archive.is
+### Discord bot for NIPRNet
 
-Dis da meanest librarian ya ever saw'd.  Was meant to be a simple bot to translate paywalled articles to archive.is versions, but has taken on a life of it's own.
+it's a bot.  it does things.  was forked (well, cloned, because github doesn't want to let me fork my own repo) from a much older (and horribly structured) python discord bot i made for my group chat with the homies ([discord-librarian](https://github.com/UnsafeOats/discord-librarian)) many years ago.
 
-Currently lives on a RPi Zero in my janky basement.  Don't mess with me or I'll pull the plug.
+### Current Structure
 
-### How to use
+the bot currently retains two of it's appendages from it's previous (well, also still current, just in a different brain) life:
 
-Posting any website currently on the list of paywalled sites will automatically cause the bot to respond with an archive.is link.  If the site isn't currently on the paywalled list, you can use the command `!paywall site`
+  1) archiver.py - functionality to allow easy archiving of paywalled urls
+  2) creeper.py - just a fun module to listen to conversation and make random comments
 
-![Posting article](./pictures/translate.png)
+the following new appendages have been added:
 
-To add to the list of paywalled sites, simply type `!add domain` to add that domain.
-
-![Add domain](./pictures/add.png)
-
-To delete from the list, use `!delete domain`.
-
-![Delete domain](./pictures/delete.png)
-
-To show a list of all paywalled sites, use `!list paywalls`
-
-![List paywalls](./pictures/list.png)
-
-Additionally, there are quite a few easter eggs thrown in for the lulz that aren't related to getting around paywalls.
+  1) roles.py - functionality to allow users to select their branch of service
