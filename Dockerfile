@@ -1,6 +1,6 @@
 FROM python:3
-WORKDIR /usr/src/bot
+WORKDIR /usr/src
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
-CMD ["python", "./archivist.py"]
+CMD ["python", "./bot.py"]

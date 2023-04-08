@@ -1,2 +1,4 @@
 */__pycache__
 src/resources/token
+.bot.env
+venv

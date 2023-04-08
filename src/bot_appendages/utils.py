@@ -1,5 +1,4 @@
 from urllib.parse import urlparse
-import pickle
 from os import path
 import pathlib
 
@@ -52,12 +51,12 @@ def url_validator(x):
 
 
 # read the paywalled config file to read all websites currently redirected by TheLibrarian
-def load_paywalls(paywall_file="paywalled"):
+def load_paywalls(paywall_file="paywall_seed.txt"):
     print("Loading paywalled sites...")
     if path.exists(pathlib.Path(__file__).parent / "resources" / paywall_file):
         file_to_read = pathlib.Path(__file__).parent / paywall_file
     else:
-        file_to_read = pathlib.Path(__file__).parent / "resources" / "base_paywalls"
+        file_to_read = pathlib.Path(__file__).parent / "resources" / "paywall_seed.txt"
     with open(file_to_read, "r") as file:
         paywalled_sites = file.read().split("\n")
         return [i for i in paywalled_sites if i != ""]

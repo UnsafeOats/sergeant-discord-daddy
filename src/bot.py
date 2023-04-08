@@ -1,10 +1,8 @@
 import discord
 from discord.ext import commands
-from utils import load_paywalls, load_token
-from librarian import Librarian
-from rando import Creeper, Utes, RateLimiter
-from wordle import Wordle
-from collector import Collector
+from bot_appendages.utils import load_paywalls, load_token
+from bot_appendages.librarian import Librarian
+from bot_appendages.creeper import Creeper
 
 
 if __name__ == "__main__":
@@ -22,10 +20,6 @@ if __name__ == "__main__":
 
     # add command cogs to bot
     bot.add_cog(Librarian(paywalled_sites))  # archive is commands and listener
-    bot.add_cog(RateLimiter())  # gripe at sal and aj when they fight
-    bot.add_cog(Utes())  # calc and gif
     bot.add_cog(Creeper(bot))  # listen to say weird things
-    bot.add_cog(Wordle(bot))  # calculate wordle stats
-    bot.add_cog(Collector(bot))  # aggregate yee data
     bot.run(token) # run the bot
 
